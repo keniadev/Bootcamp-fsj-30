@@ -1,0 +1,309 @@
+/*URL DE fUENTE MONTSERRAT*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/*BODY*/
+.main-body {
+  
+  background-color: #192c63;
+  font-family: "Montserrat", "sans-serif";
+  color: #fff;
+  margin: 0;
+  padding: 0;
+ 
+}
+/*DIV WRAPER*/
+.main-body .wraper {
+  width: 90vw;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+
+}
+/*NAVBAR*/
+.main-body .wraper .top-header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+/*LOGO SECTION*/
+.main-body .wraper .top-header .navbar .logo-section{
+max-width: 200px;
+}
+/*LOGO TEXT*/
+.main-body .wraper .top-header .navbar .logo-section .logo-text {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+.main-body .wraper .top-header .navbar .logo-section .logo-text  {
+  color: rgb(44, 42, 218);
+  animation: colorChange 3s infinite alternate;
+}
+@keyframes colorChange {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  50% {
+    color: #cc56b2;
+  }
+  100% {
+    color: rgb(85, 180, 235);
+  }
+}
+.main-body .wraper .top-header .navbar .logo-section .logo-text span{
+  color: rgb(85, 180, 235);
+text-shadow: 0 0 1px white, 0 0 3px white;
+
+}
+/*NAV MENU*/
+.main-body .wraper .top-header .navbar .nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+
+}
+.main-body .wraper .top-header .navbar .nav-menu a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+/*DISEÑO DE LA LINEA QUE APARECERA EN HOVER*/
+.main-body .wraper .top-header .navbar .nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(85, 180, 235);
+  transition: width 0.3s ease;
+}
+/*CAMBIO DE COLOR DEL ENLACE*/
+.main-body .wraper .top-header .navbar .nav-menu a:hover {
+  color: rgb(85, 180, 235); 
+}
+/*HOVER DONDE APARECE LA LINEA EN AFTER*/
+.main-body .wraper .top-header .navbar .nav-menu a:hover::after {
+  width: 100%;
+ 
+}
+/*MAIN CONTENT*/
+.main-body .wraper .main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 4rem;
+ 
+}
+/*FOTO PERFIL*/
+.main-body .wraper .main-content .foto-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10rem;
+}
+.main-body .wraper .main-content .foto-container img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+.foto-container img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+}
+.main-body .wraper .main-content .biografia .boton {
+  background: #bb0b83;
+  color: white;
+  padding: 12px 24px;
+  font-size: 0.8em;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 8px;
+  animation: pulsar 2s ease-in-out infinite;
+}
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.main-body .wraper .main-content .biografia .boton:hover {
+  
+  transform: scale(1.05);
+ filter: drop-shadow(1px 2px 0 white);
+ color: #000;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+/*H1 TYPING --texto de presentacion--*/
+.main-body .wraper .main-content .biografia .typing {
+  font-size: 1.5em;
+  font-weight: 600;
+  overflow: hidden;
+  border-right: 2px solid rgb(255, 255, 255);
+  width: 0;
+   white-space: nowrap;
+  animation: typing 1s steps(25) forwards;
+}
+@keyframes typing {
+  to {
+    width: 100%;
+  }
+}
+/*DESCRIPTION*/
+.main-body .wraper .main-content .biografia .description {
+  font-size: 1em;
+  line-height: 1.5em;
+  color: white;
+  opacity: 0;
+  animation: description-animation 4s ease forwards;
+}
+@keyframes description-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*MISPROYECTOS-CONTAINER*/
+.main-body .wraper .misproyectos-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.main-body .wraper .misproyectos-container .projects-header {
+   text-align: center;
+   font-size: 1em;
+   font-weight:300;
+}
+/*GRID CONTAINER*/
+.main-body .wraper  .grid-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+ 
+}
+.main-body .wraper .grid-container .projectcard {
+  width: 280px;
+  background-color: #e7e5e5;
+  border-radius: 8px;
+  padding: 0.7rem;
+  box-sizing: border-box;
+  transition: transform 0.6s ease;
+}
+.main-body .wraper .grid-container .projectcard:hover{
+  transform: scale(1.05);
+}
+.main-body .wraper  .grid-container .projectcard .img-top {
+  width: 100%;
+  border-radius: 8px;
+  height: 150px;
+  background-color: rgb(206, 205, 205);
+}
+.main-body .wraper  .grid-container .projectcard .cardcontent .enlaces {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+  font-weight: 600;
+ color: #bb0b83;
+ margin-top: 2rem;
+}
+.main-body .wraper  .grid-container .projectcard .cardcontent h3{
+  color: #192c63;
+  font-size: 1em;
+}
+/*FORMULARIO*/
+.main-body .wraper .contacto .formulario {
+  max-width: 550px;
+  background: #f7f2f2;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 4rem auto;
+}
+/*FORMULARIO - INPUT*/
+.main-body .wraper .contacto .formulario .input {
+  display: block;
+  width: 95%;
+  margin-bottom: 1rem;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-family:  "Montserrat", "sans-serif";
+  font-weight: 800;
+  padding-left: 0.5rem;
+  
+}
+/*FORMULARIO - LABEL*/
+.main-body .wraper .contacto .formulario .label{
+
+  color: black;
+  font-size: 1em;
+  font-weight: 600;
+
+}
+/*TEXTAREA*/
+.main-body .wraper .contacto .formulario textarea.input{
+height: 45px;
+padding-top: 10px;   
+width: 95%;
+}
+/*BTN SUBMIT*/
+.main-body .wraper .contacto .formulario .btn-submit {
+  background-color:#bb0b83 ;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+ width: fit-content;
+ padding: 0.75rem 2rem;
+  border-radius: 8px;
+   animation: pulsar 2s ease-in-out infinite;
+}
+.main-body .wraper .contacto .formulario .btn-submit:hover{
+  color: #000;
+}
+/*HR*/
+hr {
+  border: none;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 3rem auto;
+  width: 80%;
+}
+/*FOOTER SECTION*/
+.main-body .wraper .footer-section {
+  text-align: center;
+  padding: 2rem 0;
+}
+.main-body .wraper .footer-section .footer-text{
+
+  font-size: 1.5em;
+}
+.main-body .wraper .footer-section .footer-text2{
+  font-size: 0.8em;
+}
+.main-body .wraper .footer-section .redesociales {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.main-body .wraper .footer-section .redesociales a {
+  color: rgb(109, 143, 255);
+  text-decoration: underline;
+}
+
